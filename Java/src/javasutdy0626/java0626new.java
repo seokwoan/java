@@ -117,7 +117,7 @@ public class java0626new {
 		
 		System.out.printf( "세 과목의 총점 : %.0f 점 \n세 과목의 평균 : %.2f 점" , total , avg );
 
-		
+		//test
 
 	}
 
