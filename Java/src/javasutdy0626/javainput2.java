@@ -14,7 +14,7 @@ public class javainput2 {
 		 직원 이름, 소속부서명, 월 급여액을 키보드를 통해 입력받는다.
 		 세금은 8%를 낸다. 실 수령액은 얼마인지를 출력
 		 이름, 부서, 실 수령액을 출력하세요.
-		 두명의 직원에 대해 출력하세요. 
+		 두명의 직원에 대해 출력하세요. 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
 		*/
 
 		Scanner word = new Scanner(System.in);
