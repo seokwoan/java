@@ -48,7 +48,7 @@ public class javainput2 {
 		System.out.printf( "첫번째 직원\n 이름 : %s 소속부서 : %s 실 수령액 : %.0f원 \n두번째 직원\n "
 				+ "이름 : %s 소속부서 : %s 실 수령액 : %.0f원 " , name1, part1, realMoney1, name2, part2, realMoney2  );
 		
-		//testsss
+		//testssssss
 	}
 
 }
