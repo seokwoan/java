@@ -36,6 +36,12 @@ public class javainput2 {
 		money2 = word.nextFloat();
 		
 		double realMoney1 ,realMoney2;
+		// 형변환 
+		// float f = 3f; 3은 int타입인데 float에 들어가면 float타입으로 타입이 변함 
+		// 큰타입 = 작은타입; 일 경우에 자동으로 큰타입으로 변한
+		// 작은타입 = 큰타입; 일 경우 자동으로 변경안됨
+		// 강제로 변경해줄수 있음 작은타입 = (바꿀타입) (큰타입); 변경하고자 하는 타입을 앞에 넣어서 강제로 타입을 변경시킴
+		// 실수 - 정수는 포함 실수>정수의 상관관계를 갖기 때문에 변경이 가능 문자열과는 불가능
 		realMoney1 = money1 * 0.92 ;
 		realMoney2 = money2 - money2 *0.08 ;
 		
