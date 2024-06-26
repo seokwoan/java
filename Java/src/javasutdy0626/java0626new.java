@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class java0626new {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 //		System.out.println("자바출력");
 		// System.in -> 입력 
 		// 입력받을수 있는 내장 클래스 Scanner
