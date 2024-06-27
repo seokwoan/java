@@ -1,4 +1,4 @@
-package javasutdy0626;
+package java0626;
 
 import java.util.Scanner;
 
