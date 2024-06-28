@@ -43,7 +43,7 @@ public class ArrayStudy {
 		// int[] arr2 = new int[];
 		// 배열의 공간을 넣어줘야함 공백으로 만들면 오류
 		
-		// 위에 만든 배열은 크기가 정해진 정적배열 크기가 정해져 있어 데이터추가, 삭제 불가능
+		// 위에 만든 배열은 크기가 정해진 정적배열 크기가 정해져 있어 데이터공간 추가, 삭제 불가능
 		
 		// 배열 생성 방법
 		// 데이터타입[] 배열이름 = new 데이터타입[배열크기];
@@ -55,13 +55,72 @@ public class ArrayStudy {
 		money[4] = 50000;
 		
 		for( int i = 0 ; i < money.length ; i++ ) {
-			
+			if ( money[i] >= 10000 ) {
 			System.out.println( money[i] );
+			}
 		}
 		
 		
+		int[] A반 = new int[3];
 		
+		A반[0] = 89;
+		A반[1] = 78;
+		A반[2] = 93;
 		
+		int[] B반 = new int[3];
+		B반[0] = 56;
+		B반[1] = 84;
+		B반[2] = 72;
+		
+		System.out.println( "A반 성적 : " + Arrays.toString(A반) );
+		System.out.println( "B반 성적 : " + Arrays.toString(B반) );
+		
+		// A반, B반 성적중에서 80점 이상만 출력
+		for( int i = 0 ; i < A반.length ; i++ ) {
+			if( A반[i] >= 80 ) {
+				System.out.println( A반[i] );
+			}
+			if( B반[i] >= 80 ) {
+				System.out.println( B반[i] );
+			}
+		}
+		
+		// 두개의 배열을 합쳐줌
+		int[] 일학년 = new int[ A반.length + B반.length ]; // 배열의 크기를 정함
+		
+		// 3번 반복
+//		for( int i = 0 ; i <  A반.length ; i++ ) {
+//			일학년[i] = A반[i];
+//			일학년[i+3] = B반[i];
+//		}
+		
+		// 6번 반복
+//		for( int i = 0 ; i < 일학년.length ; i++ ) {
+//			if ( i < 3) {
+//				일학년[i] = A반[i];
+//			}
+//			else {
+//				일학년[i] = B반[i-3];
+//			}	
+//		}
+		
+		// method사용 
+		System.arraycopy( A반 , 0 , 일학년 , 0 , A반.length );
+		System.arraycopy( B반 , 0 , 일학년 , 3 , B반.length ); // A반의 데이터가 일학년에 이미 들어있기때문
+		// 배열복사 -> 배열의 값을 복사해서 다른 배열에 넣어주는 method
+		// 같은 타입의 배열만 가능
+		// System.arraycopy (복사할배열(a), a에서 복사를 시작할 인덱스 , 저장할 배열(b) , b에서 저장 시작 위치의 인덱스, 복사할 데이터 수( a시작 인덱스에서 몇번 인덱스까지 ));
+		
+		for ( int i = 0 ; i < 일학년.length ; i++) {
+			if( 일학년[i] >= 80 ) {
+				System.out.println( 일학년[i] );
+			}
+		}
+		
+		Arrays.sort( 일학년 );  // 배열의 데이터값 정렬 오름차순
+		System.out.println( Arrays.toString( 일학년 ) );
+		boolean same = Arrays.equals( A반 , B반 ); // 배열의 같은 배열인지 확인하는 method
+		System.out.println( "A반, B반 배열이 같은가? " + same );
 
 	}
 
