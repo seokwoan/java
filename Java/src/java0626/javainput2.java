@@ -108,16 +108,3 @@ public class javainput2 {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

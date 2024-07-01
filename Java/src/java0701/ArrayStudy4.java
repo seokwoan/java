@@ -56,11 +56,9 @@ public class ArrayStudy4 {
 				"대전 동구 가양동 945" , "대전 중구 선화동 1234" , "대전 중구 대흥동 23" , 
 				"대전 중구 선화동 984"
 		};
-		
-		System.out.println( addr[1].contains( "선화동" ) );
-		
-		
+
 		int length = 0; 
+		int 선화 = 0;
 		
 		for( int i = 0 ; i < addr.length ; i++) {
 			if( addr[i].contains("선화동") ) {
@@ -70,34 +68,93 @@ public class ArrayStudy4 {
 		
 		String[] 선화동 = new String[length];
 		
-
+		for ( int i = 0 ; i < addr.length ; i++ ) {
+			if( addr[i].contains("선화동") ) {
+				선화동[선화++] = addr[i]; // ++이 뒤에 있으면 우선순위가 낮아 대입연산자 다음작동 
+				//선화++;
+			}
+		}
 		
 		System.out.println( Arrays.toString(선화동) );
 		
 		
+		// 2차원 배열 
+		// 1차원 배열의 공간에 1차원 배열을 연결해놓은 구조
+		
+		int[][] arr = new int[2][3];
+		// java에서 2차원배열은 index가 2개이기 때문에 []를 2개 넣어준다
+		// int[][] 변수명 = new int[length][length];
+		
+		arr[0][0] = 10;
+		arr[0][1] = 20;
+		arr[0][2] = 30;
+		arr[1][0] = 40;
+		arr[1][1] = 50;
+		
+		// System.out.println( Arrays.toString(arr) ); 
+		// 2차원 배열의 경우 index를 입력하지 않으면 각 1차원 배열의 주소가 나온다.
+		
+		// 고등학교 1학년 학생들의 성적
+		// 1학년은 1반부터 6반까지 있다.
+		
+		// new int[6][30];
+		// 데이터의 종류가 다양하면 배열을 사용하지 않음
+		// 3차원 배열까지는 사용 4차원 이상은 거의 사용하지 않음
+		// 1~3학년까지로 하면 3차원 배열
+		// 대전 고등학교까지하면 4차원 배열
+		// 전국 고등학교면 5차원 배열
+		// 데이터 저장보다는 화면 표시를 위해 사용
+		
+		
+		int[] a = new int[] {
+				10, 20 ,30 ,40 ,50, 60, 70 ,80, 90, 100
+		};
+		
+		for( int data : a ) { // for-each문 // javascript for-each문, jquery each문
+			System.out.println( data );
+		}// 배열 전용 for문
+		// for( int 변수명 : 배열명){ (변수명) } 배열에서 데이터값을 순차적으로 빼올때 사용
+		// index없이 데이터를 표현가능 index표현이 없어 index의 값은 알수 없음
+		
+		
+		int[][] array1 = new int[2][3];
+		System.out.println( array1.length ); // 행의 개수 2
+		System.out.println( array1[0].length ); // index0(1행)의 열의 개수 3
+		System.out.println( array1[1].length); // index1(2행)의 열의 개수 3
+		System.out.println();
+		
+		int[][] array2 = new int[][] { { 1 , 2 } , { 3 , 4 , 5 } };
+		System.out.println( array2.length ); // 행의 개수 2
+		System.out.println( array2[0].length ); // index0(1행)의 열수 개수 2
+		System.out.println( array2[1].length ); // index1(2행)의 열수 개수 3
+		System.out.println();
+		
+		System.out.print( array2[0][0] + " " ); // array2의 0,0 index 1
+		System.out.print( array2[0][1] + " " ); // array2의 0,1 index 2
+		System.out.println();
+		System.out.print( array2[1][0] + " " ); // array2의 1,0 index 3
+		System.out.print( array2[1][1] + " " ); // array2의 1,1 index 4
+		System.out.print( array2[1][2] + " " ); // array2의 1,2 index 5
+		System.out.println();
+		System.out.println();
+		
+		for( int i = 0 ; i < array2.length ; i++ ) {  // 행의 index
+			for( int j = 0 ; j < array2[i].length ; j++ ) { // i행의 j index
+				System.out.print( array2[i][j] + " " ); // 
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		for ( int[] array : array2 ) { // for-each문 으로 array2의 행의 값을 array에 순차적 저장
+									   // array2의 행 값이 배열이라 int[]로 배열생성
+			for ( int k : array) { // array에 저장된 행의 열값을 순차적 저장
+								   // array의 열 값이 정수라 변수에 대입
+				System.out.print( k + " " ); // 출력
+			}
+			System.out.println();
+		}
 		
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
