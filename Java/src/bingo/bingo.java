@@ -20,27 +20,22 @@ public class bingo {
 			 , "44" , "45" , "46" , "47" , "48" , "49" , "50"
 		};
 		
-		String[] bingo = new String[] {
-				"0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , 
-				"0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , "0" , 
-				"0"
-		};
+		String[] bingo = new String[25];
 		String[] bingoRow1 = new String[5];
 		String[] bingoRow2 = new String[5];
 		String[] bingoRow3 = new String[5];
 		String[] bingoRow4 = new String[5];
 		String[] bingoRow5 = new String[5];
-		String[] bingoCol1 = new String[5];
-		String[] bingoCol2 = new String[5];
-		String[] bingoCol3 = new String[5];
-		String[] bingoCol4 = new String[5];
-		String[] bingoCol5 = new String[5];
-		String[] bingoCross1 = new String[5];
-		String[] bingoCross2 = new String[5];
+//		String[] bingoCol1 = new String[5];
+//		String[] bingoCol2 = new String[5];
+//		String[] bingoCol3 = new String[5];
+//		String[] bingoCol4 = new String[5];
+//		String[] bingoCol5 = new String[5];
+//		String[] bingoCross1 = new String[5];
+//		String[] bingoCross2 = new String[5];
 //		String bingoNum;
 		int random = 0;
 		int line = 0;
-		boolean play = true;
 		boolean numCheck = true;
 		boolean show = true;
 		String zero = "00";
@@ -54,12 +49,11 @@ public class bingo {
 		// 배열에 랜덤수 입력
 		for( int i = 0 ; i < bingo.length ; i++ ) {
 			random = (int) (Math.random() * 50 );
-			int search = bingo[i].indexOf( base[random]);
-			if( search == -1 ){
+			if( base[random] != "" ){
 				bingo[i] = base[random];
 				base[random] = "";
 			}
-			else if( search != -1 ){
+			else if( base[random] == "" ){
 				while( true ) {
 					random = (int) (Math.random() * 50 );
 					if( base[random] != "" ) {
@@ -70,8 +64,20 @@ public class bingo {
 				}	
 			}
 		}
+		// 
+//		for( int i = 0 ; i < bingo.length ; i++ ) {
+//			random = (int) (Math.random() * 50 );
+//			if( base[random] != "") {
+//				bingo[i] = base[random];
+//				base[random] = "";
+//			}
+//			else {
+//				i--;
+//			}
+//		}
 		
-		System.out.println( Arrays.toString(bingo) );
+		
+		//System.out.println( Arrays.toString(bingo) );
 		// 배열 분리 화면표시용
 		for( int i = 0 ; i < 5 ; i++) {
 			// 가로
@@ -81,14 +87,14 @@ public class bingo {
 			System.arraycopy(bingo, (i+15), bingoRow4, i, 1);
 			System.arraycopy(bingo, (i+20), bingoRow5, i, 1);
 			//세로
-			System.arraycopy(bingo, (i*5), bingoCol1, i, 1);
-			System.arraycopy(bingo, (i*5+1), bingoCol2, i, 1);
-			System.arraycopy(bingo, (i*5+2), bingoCol3, i, 1);
-			System.arraycopy(bingo, (i*5+3), bingoCol4, i, 1);
-			System.arraycopy(bingo, (i*5+4), bingoCol5, i, 1);
-			// 대각선
-			System.arraycopy(bingo, (i*6), bingoCross1, i, 1);
-			System.arraycopy(bingo, (i*4+4), bingoCross2, i, 1);
+//			System.arraycopy(bingo, (i*5), bingoCol1, i, 1);
+//			System.arraycopy(bingo, (i*5+1), bingoCol2, i, 1);
+//			System.arraycopy(bingo, (i*5+2), bingoCol3, i, 1);
+//			System.arraycopy(bingo, (i*5+3), bingoCol4, i, 1);
+//			System.arraycopy(bingo, (i*5+4), bingoCol5, i, 1);
+//			// 대각선
+//			System.arraycopy(bingo, (i*6), bingoCross1, i, 1);
+//			System.arraycopy(bingo, (i*4+4), bingoCross2, i, 1);
 		}
 		
 		System.out.println( "빙고입니다. 숫자를 입력하면 입력한 숫자는 00으로 변하고" );
@@ -103,7 +109,7 @@ public class bingo {
 
 		System.out.println( "숫자는 두자리로 입력해주세요 ex) 01");
 		
-		while ( play ) {
+		while ( true ) {
 			numCheck = true;
 			show = true;
 			System.out.println( "01~50중 원하는 숫자를 입력하세요" );
@@ -126,21 +132,21 @@ public class bingo {
 						System.arraycopy(bingo, (i+15), bingoRow4, i, 1);
 						System.arraycopy(bingo, (i+20), bingoRow5, i, 1);
 						//세로
-						System.arraycopy(bingo, (i*5), bingoCol1, i, 1);
-						System.arraycopy(bingo, (i*5+1), bingoCol2, i, 1);
-						System.arraycopy(bingo, (i*5+2), bingoCol3, i, 1);
-						System.arraycopy(bingo, (i*5+3), bingoCol4, i, 1);
-						System.arraycopy(bingo, (i*5+4), bingoCol5, i, 1);
-						// 대각선
-						System.arraycopy(bingo, (i*6), bingoCross1, i, 1);
-						System.arraycopy(bingo, (i*4+4), bingoCross2, i, 1);
+//						System.arraycopy(bingo, (i*5), bingoCol1, i, 1);
+//						System.arraycopy(bingo, (i*5+1), bingoCol2, i, 1);
+//						System.arraycopy(bingo, (i*5+2), bingoCol3, i, 1);
+//						System.arraycopy(bingo, (i*5+3), bingoCol4, i, 1);
+//						System.arraycopy(bingo, (i*5+4), bingoCol5, i, 1);
+//						// 대각선
+//						System.arraycopy(bingo, (i*6), bingoCross1, i, 1);
+//						System.arraycopy(bingo, (i*4+4), bingoCross2, i, 1);
 					}
 					if ( show ) {
 						System.out.println( Arrays.toString(bingoRow1) );
 						System.out.println( Arrays.toString(bingoRow2) );
 						System.out.println( Arrays.toString(bingoRow3) );
 						System.out.println( Arrays.toString(bingoRow4) );
-						System.out.println( Arrays.toString(bingoRow5) ); //압축가능
+						System.out.println( Arrays.toString(bingoRow5) );
 						break;
 					}
 				}
@@ -152,13 +158,13 @@ public class bingo {
 				System.out.println( Arrays.toString(bingoRow2) );
 				System.out.println( Arrays.toString(bingoRow3) );
 				System.out.println( Arrays.toString(bingoRow4) );
-				System.out.println( Arrays.toString(bingoRow5) ); // 압축가능
+				System.out.println( Arrays.toString(bingoRow5) );
 				continue;
 			}
 			line = 0;
 			cross = 0;
 			cross2 = 0;
-			// 빙고 줄수 확인 압축 가능
+			// 빙고 줄수 확인
 			for( int i = 0 ; i < 5 ; i++ ) {
 				for( int k = 0 ; k < 5 ; k++ ) {
 					if( bingo[i*5+k] == zero ){
@@ -198,12 +204,10 @@ public class bingo {
 			}
 			if( line > 5 ) {
 				System.out.println( " Game over ");
+				break;
 			}
 			
 		}
-
-		
-		
 
 				
 	}
