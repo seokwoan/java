@@ -100,24 +100,33 @@ public class bingo {
 		System.out.println( "빙고입니다. 숫자를 입력하면 입력한 숫자는 00으로 변하고" );
 		System.out.println( "가로, 세로, 대각선으로 00이 모이면 빙고 \n5줄의 빙고를 만드세요" );
 //		System.out.println( Arrays.toString(bingo) );
-		System.out.println( Arrays.toString(bingoRow1) );
-		System.out.println( Arrays.toString(bingoRow2) );
-		System.out.println( Arrays.toString(bingoRow3) );
-		System.out.println( Arrays.toString(bingoRow4) );
-		System.out.println( Arrays.toString(bingoRow5) );
+//		System.out.println( Arrays.toString(bingoRow1) );
+//		System.out.println( Arrays.toString(bingoRow2) );
+//		System.out.println( Arrays.toString(bingoRow3) );
+//		System.out.println( Arrays.toString(bingoRow4) );
+//		System.out.println( Arrays.toString(bingoRow5) );
 		
 
 		System.out.println( "숫자는 두자리로 입력해주세요 ex) 01");
 		
 		while ( true ) {
 			numCheck = true;
-			show = true;
+//			show = true;
+			System.out.println( Arrays.toString(bingoRow1) );
+			System.out.println( Arrays.toString(bingoRow2) );
+			System.out.println( Arrays.toString(bingoRow3) );
+			System.out.println( Arrays.toString(bingoRow4) );
+			System.out.println( Arrays.toString(bingoRow5) );
 			System.out.println( "01~50중 원하는 숫자를 입력하세요" );
+			if( show ) {
+				System.out.println( "숫자는 두자리로 입력해주세요 ex) 01");
+				show = false;
+			}
 			userNum = number.nextLine();
 			if ( userNum.length() != 2 ) {
 				System.out.println( "숫자는 두자리로 입력해주세요");
-				numCheck = false;
-				show = false;
+//				numCheck = false;
+//				show = false;
 				continue;
 			}
 			for ( int k = 0 ; k < bingo.length ; k++ ) {
@@ -141,26 +150,26 @@ public class bingo {
 //						System.arraycopy(bingo, (i*6), bingoCross1, i, 1);
 //						System.arraycopy(bingo, (i*4+4), bingoCross2, i, 1);
 					}
-					if ( show ) {
-						System.out.println( Arrays.toString(bingoRow1) );
-						System.out.println( Arrays.toString(bingoRow2) );
-						System.out.println( Arrays.toString(bingoRow3) );
-						System.out.println( Arrays.toString(bingoRow4) );
-						System.out.println( Arrays.toString(bingoRow5) );
-						break;
-					}
+//					if ( show ) {
+//						System.out.println( Arrays.toString(bingoRow1) );
+//						System.out.println( Arrays.toString(bingoRow2) );
+//						System.out.println( Arrays.toString(bingoRow3) );
+//						System.out.println( Arrays.toString(bingoRow4) );
+//						System.out.println( Arrays.toString(bingoRow5) );
+//						break;
+//					}
 				}
 			}
 			
-			if( numCheck ) {
-				System.out.println("없는 숫자입니다.");
-				System.out.println( Arrays.toString(bingoRow1) );
-				System.out.println( Arrays.toString(bingoRow2) );
-				System.out.println( Arrays.toString(bingoRow3) );
-				System.out.println( Arrays.toString(bingoRow4) );
-				System.out.println( Arrays.toString(bingoRow5) );
-				continue;
-			}
+//			if( numCheck ) {
+//				System.out.println("없는 숫자입니다.");
+//				System.out.println( Arrays.toString(bingoRow1) );
+//				System.out.println( Arrays.toString(bingoRow2) );
+//				System.out.println( Arrays.toString(bingoRow3) );
+//				System.out.println( Arrays.toString(bingoRow4) );
+//				System.out.println( Arrays.toString(bingoRow5) );
+//				continue;
+//			}
 			line = 0;
 			cross = 0;
 			cross2 = 0;

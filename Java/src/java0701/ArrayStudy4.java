@@ -41,12 +41,15 @@ public class ArrayStudy4 {
 			temp[i] = num[i];  // 기존 배열의 값을 넣어줌
 		}
 		
-		num = temp; // 배열이 같다?
+		num = temp; // 배열이 같다? 배열의 인덱스 데이터 값이 같다.
+		// num에 temp의 주소값이 저장되어 temp의 주소값을 가져오는데 
+		// num배열의 인덱스와 temp배열의 인덱스에 같은 값을 넣어주는 for문을 돌려서 
+		// temp의 주소값을 가져와도 같은 인덱스에 같은 값을 가지고 있어서 배열의 크기가 늘어난것처럼 보인다. 
 		num[5] = 60;
 		System.out.println( Arrays.toString( num ) );
 		
-		// 문자열에서 같다 비교는 .equals()로 한다. 
-		// 문자열에 특정문자나 문자열 포함여부는 .contains()
+		// 문자열에서 같다 비교는 .equals()로 한다. - 문자열.equals(비교문자열)
+		// 문자열에 특정문자나 문자열 포함여부는 .contains() - 문자열.contains(타겟문자열)
 		// 다음 주소중 선화동에 주소만 추출하여 배열에 저장하세요
 		// 배열에 잘 저장되었는지 확인 출력은 Arrays 이용하여 출력
 		
