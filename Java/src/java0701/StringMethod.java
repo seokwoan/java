@@ -155,39 +155,8 @@ public class StringMethod {
 
 		System.out.println( name );
 		System.out.println( age );
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

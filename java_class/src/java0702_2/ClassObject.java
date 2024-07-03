@@ -17,7 +17,7 @@ public class ClassObject {
 		
 		Car car2 = new Car( "그랜져" , 3000 , "휘발유" ); 
 		// 매개변수가 있는 생성자 method를 사용하면 객체를 만들때 매개변수를 이용해 값을 저장할 수 있다. 
-		
+		System.out.println(car2);
 		
 		/*  
 		 데이터 : 이름 , 포인트 , 평점
@@ -162,13 +162,5 @@ class Author{
 		
 	}
 }
-
-
-
-
-
-
-
-
 
 
