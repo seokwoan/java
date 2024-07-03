@@ -114,7 +114,7 @@ class DataIdenti{ // 연령대, 직업 분류 등등 데이터 분류를 위한 class
 
 	void jobGroup( String name , String job ) {
 		String group = null;
-		switch( job ) {
+		switch( job ) { // if(job.equals("군인")) -> 자바에서 문자열 비교는 equals! 
 			case "군인" : 
 				group = "05.국방";
 				break;
@@ -122,7 +122,8 @@ class DataIdenti{ // 연령대, 직업 분류 등등 데이터 분류를 위한 class
 				group = "15.기계"; 
 				break;
 			case "섬유공장사장" : 
-				group = "18.섬유의복"; 
+				group = "18.섬유의복";
+				break;
 		}
 		System.out.printf( "%s : %s\n", name , group);
 			
