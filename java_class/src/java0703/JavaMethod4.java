@@ -28,6 +28,12 @@ public class JavaMethod4 {
 		int total = rm.total(); // method에서 총점 계산해서 return값 받기
 		int avg = rm.avg(total); // return 받은 값 매개변수로 method에 넘겨 평균값 return
 		System.out.printf( "총점 : %d \n평균 : %d\n", total , avg );
+		
+		Dice game = new Dice();
+		int 형준 = game.chance();
+		int 석완 = game.chance();
+		String win = game.winner( 형준 , 석완 );
+		System.out.printf( "형준 주사위 : %d \n석완 주사위 : %d\n결과 : %s" , 형준, 석완, win );
 	}
 
 }
@@ -78,5 +84,37 @@ class ReturnMth{
 	}
 	
 }
+
+class Dice{
+	
+	int chance() {
+		int roll = (int) ( Math.random() * 6 + 1 );
+		return roll;		
+	}
+	
+	String winner( int 형준 , int 석완 ) {
+		String lose = null;
+		if( 형준 > 석완 ) {
+			lose = "형준 승";
+		}
+		else if( 형준 < 석완) {
+			lose = "석완 승";
+		}
+		else {
+			lose = "무승부";
+		}
+		return lose;
+			
+	}
+}
+
+
+
+
+
+
+
+
+
 
 
