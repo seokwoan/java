@@ -32,8 +32,7 @@ public class JavaMethod4 {
 		Dice game = new Dice();
 		int 형준 = game.chance();
 		int 석완 = game.chance();
-		String win = game.winner( 형준 , 석완 );
-		System.out.printf( "형준 주사위 : %d \n석완 주사위 : %d\n결과 : %s" , 형준, 석완, win );
+		game.winner( 형준 , 석완 );
 	}
 
 }
@@ -92,7 +91,7 @@ class Dice{
 		return roll;		
 	}
 	
-	String winner( int 형준 , int 석완 ) {
+	void winner( int 형준 , int 석완 ) {
 		String lose = null;
 		if( 형준 > 석완 ) {
 			lose = "형준 승";
@@ -103,8 +102,7 @@ class Dice{
 		else {
 			lose = "무승부";
 		}
-		return lose;
-			
+		System.out.printf( "형준 주사위 : %d \n석완 주사위 : %d\n결과 : %s" , 형준, 석완, lose );	
 	}
 }
 
