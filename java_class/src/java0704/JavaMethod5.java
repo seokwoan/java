@@ -14,6 +14,7 @@ public class JavaMethod5 {
 		
 		System.out.println( Arrays.toString(num));
 		
+		// 문제 1.
 		// 사각형의 너비와 높이를 설정하고 넓이를 출력하세요
 		// 넓이는 main method에서 출력되게 하세요
 		
@@ -22,12 +23,13 @@ public class JavaMethod5 {
 //		int area = util.rectArea();
 //		System.out.println( "넓이 : " + area );
 		
+		
+		// 문제 2.
 		// 로그인 가능한 아이디는 skyblue 비밀번호는 1234sea
 		// login method를 실행하여 로그인 여부를 출력하세요
 		// 아이디 비밀번호가 일치하면 로그인 성공 출력
 		// 하나라도 불일치면 로그인 실패 출력
 		// 로그인 여부 출력은 main에서 
-		
 		
 //		boolean isFail = util.login();
 //		if( isFail ) {
@@ -37,6 +39,8 @@ public class JavaMethod5 {
 //			System.out.println( "로그인에 실패하셨습니다.");
 //		}
 		
+		
+		// 문제 3.
 		// 정수 3개를 키보드를 통해 입력 받으세요.
 		// 입력한 세 정수의 합이 100을 넘으면 100 - 합의 결과를 출력하고 
 		// 100을 넘지 않으면 세 정수의 합을 출력하세요
@@ -50,7 +54,7 @@ public class JavaMethod5 {
 
 
 class MethodUtil{
-
+	// 정수 두개
 	int[] twoNum() { // return으로 2개 이상의 값을 보내려면 배열로 보내야한다. 
 		int num1 = 20, num2 = 50;
 //		int[] temp = new int[] { num1 , num2 }; // 배열명을 정해서 새로운 배열을 만들어도 되고
@@ -66,7 +70,7 @@ class MethodUtil{
 		
 	}
 	
-	
+	// 문제 2.
 	boolean login(){
 		Scanner sc = new Scanner(System.in);
 		System.out.print( "아이디 : " );
@@ -92,6 +96,7 @@ class MethodUtil{
 		
 	}
 	
+	// 문제 3.
 	int numSum() {
 		Scanner num = new Scanner(System.in);
 		System.out.print( "첫번째 정수를 입력하세요 : " );
@@ -108,6 +113,7 @@ class MethodUtil{
 	
 }
 
+// 문제 1.
 class Box{
 	
 	void main() {
@@ -126,8 +132,7 @@ class Box{
 		cross = row * col;
 		
 		System.out.printf( "가로 %d 세로 %d 넓이 %d\n", row, col, cross );
-		
-		
+
 	}
 	
 }
