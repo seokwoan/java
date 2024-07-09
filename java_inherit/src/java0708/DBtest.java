@@ -13,6 +13,7 @@ public class DBtest {
 		
 		System.out.print( "1. 입력  2. 출력 " );
 		int menu = scan.nextInt();
+		scan.nextLine();
 		
 		switch( menu ) {
 			case 1:
