@@ -60,6 +60,7 @@ public class BoardDAO { //database를 사용하기 위한 class
 				list[i] = new Board( rs.getInt( "board_id" ) ,
 						rs.getString( "title" ) , rs.getString( "writer" ) ,
 						rs.getString( "content" ) , rs.getInt( "hit" ) );
+				i++;
 			}
 			
 		}
