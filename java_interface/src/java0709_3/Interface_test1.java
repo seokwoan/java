@@ -112,8 +112,3 @@ public class Interface_test1 {
 //					   - 데이터베이스에 저장할 데이터 class - Entity
 // 데이터베이스 처리 interface - repository
 
-
-
-
-
-
