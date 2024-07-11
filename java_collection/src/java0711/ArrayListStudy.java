@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class ArrayListStudy {
 
 	public static void main(String[] args) {
-		
+		//a
 		// ArrayListø° class¿« ∞¥√º∏¶ ≥÷æÓ¡‹
 		ArrayList<Member> list = new ArrayList<>();
 		

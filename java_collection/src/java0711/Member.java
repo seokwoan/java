@@ -18,7 +18,7 @@ public class Member {
 		return name + " , " + age + " , " + birth;
 	}
 	
-	
+	//a
 //	@Override
 //	public boolean equals( Object o ) { // 매개변수로 넣어줄수 있는건 ArrayList에 넣어준 객체의 class타입
 //		
