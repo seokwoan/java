@@ -178,7 +178,9 @@ public class CollectionStudy {
 		- TreeMap Class // LinkedList구조 , 검색, 정렬 특화
 		- LinkedHashMap class // 반반? 섞어서 사용
 		
+	HashSet, HastMap은 equals method를 만들어도 사용불가 -> hsahCode도 override해줘야 사용가능
 	interface 밑에있는 class들의 특징을 알야아 한다.	
+	
 
  */
 
