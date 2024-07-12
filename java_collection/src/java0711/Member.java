@@ -44,6 +44,5 @@ public class Member {
 	public void setBirth(String birth) {
 		this.birth = birth;
 	}
-	//a
 	
 }
