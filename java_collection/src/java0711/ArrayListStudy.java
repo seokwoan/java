@@ -134,20 +134,3 @@ public class ArrayListStudy {
 
 }
 //a
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

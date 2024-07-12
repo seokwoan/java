@@ -46,21 +46,3 @@ public class ExceptionTest2 {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

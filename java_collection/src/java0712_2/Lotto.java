@@ -22,5 +22,20 @@ public class Lotto {
 		this.num = num;
 	}
 	
+	@Override
+	public boolean equals( Object o ) {
+		Lotto tmp = (Lotto) o;
+		
+		return true;
+	}
 	
 }
+
+
+
+
+
+
+
+
+

@@ -58,15 +58,3 @@ public class ExceptionTest1 {
 		- 에러나 오류를 해결하는 방법이 아니고 회피하는 방법
 		
  */
-
-
-
-
-
-
-
-
-
-
-
-
