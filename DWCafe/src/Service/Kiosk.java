@@ -1,6 +1,6 @@
 package Service;
 
-public interface kiosk {
+public interface Kiosk {
 
 	public void action();
 	
