@@ -20,3 +20,21 @@ public class DWshop {
 	}
 
 }
+
+/*
+Product 부모class가 가질 공통 변수 생성
+Electronics, Clothing 자식class 부모class의 변수와 개별 변수 생성
+
+CartItem <T Expends Product> 의 제네릭 타입으로 class생성
+제네릭타입의 변수 생성
+수량 변수 생성
+
+ShoppingCart 
+제네릭class로 설정하지 않고 method에 사용 
+	-> 제네릭class라면 생성시 타입 지정을 하고 해당 타입의 객체만 넣을 수 있음
+ArrayList에 와일드카드를 사용해 제네릭타입 표현
+- addCart method를 통해 
+CartItem의 객체 생성 및 list에 저장
+- showCart method를 통해
+list에 저장된 항목 출력
+*/
