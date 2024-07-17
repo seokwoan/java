@@ -19,7 +19,64 @@ public class GenericStudy2 {
 		
 		// ArrayList에 Book, DVD 개체 저장
 		
+		
+		// 대여하기
+		Library lib = new Library();
+		
+		lib.addRental( book.get(0) , "이순신" );
+		lib.addRental( dvd.get(0) , "김춘추" );
+		
+		lib.showRentalList();
+		
+		
+		
+		
+		// Rental class를 이용
+//		Rental<DVD> rent = new Rental<>( dvd.get(0) , "이순신" );
+//		System.out.println( rent );
+//		
+//		Rental<Book> brent = new Rental<>( book.get(0) , "김춘추" );
+//		System.out.println( brent );
+		
+		
 
 	}
 
 }
+
+
+
+
+
+
+/*
+	메인 method 가진 class 
+		book, dvd 객체 추가 
+		Library 객체 생성해서 렌탈여부 출력
+
+	Library	- addRental method 생성
+		Rental 객체 생성하는 method
+		- 대여 항목 저장할 ArrayList 생성
+		Rental객체 생성하는 method에 객체 생성하고 저장
+		- 대여항목 보여주는 method 생성
+	
+	Rantal	- 제네릭표현으로 book과 dvd객체 저장해서
+		대여자 출력
+	
+	Media	- 다형성을 위한 부모class
+		식별번호, 제목 변수를 가짐
+	
+	Book	- 저자의 변수를 가짐 
+ */
+
+
+
+
+
+
+
+
+
+
+
+
