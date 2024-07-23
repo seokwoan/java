@@ -56,6 +56,7 @@ class GithubRepository{
 	
 }
 
+	// implements없이 정의한 일반적인 class
 //class GithubIssue{
 //	private int id;
 //	private String title;
@@ -95,6 +96,7 @@ class GithubRepository{
 //}
 
 
+	// Cloneable을 implements한 프로토타입복제를 위한 class
 class GithubIssue implements Cloneable{
 	private int id;
 	private String title;

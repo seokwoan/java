@@ -9,14 +9,14 @@
 		서버 - application : 처음 서버가 시작할때 생성되는 객체 ( 서버 단위로 동작 하나만 존재 ) 
 		연결 - session : 사용자가 서버에 처음 요청할때 생성되고 사용자가 브라우저를 종료하기 
 						전까지는 살아있는 객체
-		페이지 -	페이지가 생성될때마다 생성되는 객체
+		페이지 -	페이지가 생성될때마다 생성되는 객체 -> servlet이 생성
 			request : 사용자의 요청내용을 저장하는 객체
 			response : 요청에 대란 응답 정보를 저장하는 객체
 			out : 출력객체
 			page : JSP페이지 자체를 나타낸다
 			config : JSP페이지의 설정 정보를 저장하는 객체
 			exception : JSP페이지의 예외발생을 처리하는 객체
-			pageCotext : JSP페이지의 정보를 저장
+			pageCotext : JSP페이지의 정보를 저장 session, request, response를 쓰지 못하는 경우 사용
 
  --%>    
     
