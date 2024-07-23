@@ -18,13 +18,13 @@ request.setCharacterEncoding("utf-8");을 적용해야 한글이 깨지지 않�
 	자자빈의 기능 사용
 	
 	종류
-	<jsp.forward /> 다른페에지로 이동( 주소변경없이 )
-	<jsp.inclued /> 외부 페이지의 내용을 포함
-	<jsp.plugin /> 웹 브라이저애서 자바 애플릿을 실행
-	<jsp.useBean /> jsp페이지에자바빈즈를 설정 ( 자바 클래스 객체)
-	<jsp.setPropery /> 자바빈즈의 프로터값이 설정됨( 클래스의 인스턴스 변수값 설정)
-	<jps.getPtoperty />. 자바빈즈의 포로퍼티값 가져오기( 클래스의 인턴스 변수값 가져오기)
-	<jps.param /> forward, lnclue의 인자추가( 메서드의 매개변수에 값 저장하는 것고 같음) 
+	<jsp:forward /> 다른페이지로 이동( 주소변경없이 )
+	<jsp:inclued /> 외부 페이지의 내용을 포함
+	<jsp:plugin /> 웹 브라이저애서 자바 애플릿을 실행
+	<jsp:useBean /> jsp페이지에자바빈즈를 설정 ( 자바 클래스 객체)
+	<jsp:setPropery /> 자바빈즈의 프로터값이 설정됨( 클래스의 인스턴스 변수값 설정)
+	<jps:getPtoperty />. 자바빈즈의 포로퍼티값 가져오기( 클래스의 인턴스 변수값 가져오기)
+	<jps:param /> forward, lnclue의 인자추가( 메서드의 매개변수에 값 저장하는 것고 같음) 
 
 
  --%>    
@@ -33,9 +33,12 @@ request.setCharacterEncoding("utf-8");을 적용해야 한글이 깨지지 않�
  	useBean
  		id : 클래스객체의 주소를 저장할 참조 변수
  		Music music = new Music();
+ 		기본 생성자 method를 호출함 -> 매개변수가 있는 생성자 method를 만들면 기본 생성자 method를
+ 		overloading해줘야함
  		class : 클래시의 경로( 패키지명 포함)
  		scope : 자바빈 객체가 저장될 영역을 설정 ( 내장객체중 하나)
  				page, request, session, application
+ 				기본값 page 
  
  	setProperty - 자바빈 객체에 인스턴스 변수에 값 저장
  	music.setTitle( "비가 오는 날엔" );
@@ -57,7 +60,8 @@ request.setCharacterEncoding("utf-8");을 적용해야 한글이 깨지지 않�
  		property="*"로 설정하면 모든 input태그의 값을 가져와 변수에 저장한다
  		
  		
-<jsp:setProperty name="music" property="title" value="" />
+<jsp:setProperty name="music" property="title" value="" /> 
+// value값은 직접입력해서 만들때 입력 input을 통해 입력 받으면 없어야함 
 <jsp:setProperty name="music" property="singer" value="" />
 <jsp:setProperty name="music" property="year" value="" />
  

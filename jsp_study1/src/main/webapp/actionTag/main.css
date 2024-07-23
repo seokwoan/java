@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+*{
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
+}
+
+#header{
+	width : 1000px;
+	padding : 10px 0;
+	margin : 0 auto;
+}
+
+#menuList{
+	display : flex;
+	list-style : none;
+	align-items : center;
+	justify-content : space-between;
+}
+
+.menu{
+	cursor : pointer;
+	font-size : 20px;
+	text-align : center;
+	width : 20%;
+}
+
+.menu:hover{
+	color : orange;
+}
+
+.active{
+	background : #ddd;
+}
+
+#main{
+	width : 1000px;
+	margin : 20px auto;
+}
+
+#imgBoard{
+	display : flex;
+	flex-wrap : wrap;
+	gap : 10px;
+}
+
+#footer{
+	width : 1000px;
+	margin : 0 auto;
+}
+
+#loginBox{
+	padding : 10px 12px;
+	background : blue;
+	border-radius : 5px;
+	position : fixed;
+	left : 20px;
+	top : 200px;
+}
+
+#loginBox a{
+	color : white;
+	text-decoration : none;
+	font-size : 20px;
+	font-weight : 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
