@@ -10,8 +10,8 @@
 	out.println( "서블릿 파라미터 : " + config.getInitParameter( "id" ) );
 	// web.xml파일에 <init-param></init-param>로 id와 value값을 생성하면 가져올 수 있다
 	// config.getServletContext().
-	// servlet에의해 작동ㅎ되는 모든 페이지의 정보를 담아두고 있다
-	// pageContext가 servletCOntext의 하위 항목이라 할 수 있음
+	// servlet에의해 작동되는 모든 페이지의 정보를 담아두고 있다
+	// pageContext가 servletContext의 하위 항목이라 할 수 있음
 	
 %>    
 
