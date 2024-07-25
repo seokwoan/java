@@ -2,12 +2,20 @@ package study;
 
 public class Member {
 
-	private String userId;
+	private String userId; // 테이블 컬럼명 user_id
 	private String userPassword;
 	private String userEmail;
 	private String userName;
 	
-
+	public Member() {}
+	public Member( String userId, String userPassword , String userEmail , String userName ) {
+		this.userId = userId;
+		this.userPassword = userPassword;
+		this.userEmail = userEmail;
+		this.userName = userName;
+		
+	}
+	
 	public String getUserId() {
 		return userId;
 	}
