@@ -37,7 +37,7 @@
 		
 		<ul class="menuList">
 			<li><a href="<%=path%>">HOME</a></li>
-			<li><a href="<%=path%>">게시판</a></li>
+			<li><a href="<%=path+"?part=board"%>">게시판</a></li>
 			<li><a href="<%=path%>">자료실</a></li>
 			<li><a href="<%=path%>">공부방</a></li>
 			<li><a href="<%=path + "?part=inquiry"%>">문의</a></li>		

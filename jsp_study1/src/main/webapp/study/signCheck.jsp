@@ -55,7 +55,7 @@
 		while( rs.next() ){
 			list.add(
 				new Member( rs.getString("user_id") , rs.getString("user_password") ,
-						rs.getString("user_email") , rs.getString("user_name") )
+						rs.getString("user_email") , rs.getString("user_name") , rs.getInt("level") )
 			);
 			
 		}
