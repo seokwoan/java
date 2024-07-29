@@ -22,7 +22,7 @@
 	String title =null;
 	String content = null;
 	String imgName = null;
-	String imgPath = "/jsp_study1/study.image/";
+	String imgPath = "/jsp_study1/study/image/";
 	
 	try{
 		
