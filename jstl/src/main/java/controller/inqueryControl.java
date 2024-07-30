@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class InqueryControl
  */
 @WebServlet("/inquery")
-public class InqueryControl extends HttpServlet {
+public class inqueryControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InqueryControl() {
+    public inqueryControl() {
         super();
         // TODO Auto-generated constructor stub
     }
