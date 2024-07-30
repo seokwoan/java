@@ -38,7 +38,8 @@ public class inqueryControl extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		response.sendRedirect( "inquery.jsp" );
+		RequestDispatcher rd = request.getRequestDispatcher( "inquery.jsp" );
+		rd.forward( request , response );
 	}
 
 }
