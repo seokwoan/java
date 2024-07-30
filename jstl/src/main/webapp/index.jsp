@@ -2,6 +2,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<a href="/main.jsp">로그인 및 회원가입</a><br>
+
+<a href="/board.jsp">게시판</a><br>
+
+<a href="/inquery">문의</a><br>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%-- prefix는 태그립의 별명, 변수명 같은 느낌 core태그를 사용할때 일반적으로 c로 사용 
 	코어태그로 변수, 조건문, 반복문, 이프문 작성 가능
@@ -132,22 +138,3 @@ ${sessionScope.num}
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

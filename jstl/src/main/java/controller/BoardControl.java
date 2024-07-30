@@ -10,18 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TestServlet1
+ * Servlet implementation class BoardControl
  */
-@WebServlet("/test1") 
-// 요청하는 주소를 바꿀수 있음 -> 컨테이너에서 처리해서 Servlet에 넘긴다
-// 
-public class TestServlet1 extends HttpServlet {
+@WebServlet("/board")
+public class BoardControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TestServlet1() {
+    public BoardControl() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,23 +28,18 @@ public class TestServlet1 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		// 기본 response.getWriter().append("Served at: ").append(request.getContextPath());
-//		response.getWriter().append("MY servlet doGet method").append(request.getContextPath());
-		// response.sendRedirect( "/" ); 사용자 요청 주소를 변경하여 페이지처리
-		
-		RequestDispatcher rd = request.getRequestDispatcher( "index.jsp" );
-		rd.forward( request, response );
-		// pagecontext없이 forward를 해주기 위한 방법
-		
+		// 게시글 제목 클릭하면 a태그의 요청방식이 get이기 때문에 doGet method가 호출된다
+		RequestDispatcher rd = request.getRequestDispatcher( "boardView.jsp" );
+		rd.forward( request , response );
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// 글 작성 클릭하면 요청 방식이 post이기 때문에 doPost method가 호출된다
+		RequestDispatcher rd = request.getRequestDispatcher( "boardWrite.jsp" );
+		rd.forward( request , response );
 	}
 
 }
