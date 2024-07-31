@@ -161,7 +161,7 @@ public class CollectionStudy {
 	
 		- List interface -> implements Collection
 		 	
-			- ArrayList class // 데이터 순차적 저장  -> implement List
+			- ArrayList // 데이터 순차적 저장  -> implement List
 			- vector // 데이터 순차적 저장
 			- LinkedList // 데이터 순차적 저장
 			- Stack // 배열구조 
