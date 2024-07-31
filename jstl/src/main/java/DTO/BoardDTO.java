@@ -1,20 +1,24 @@
-package study;
+package DTO;
 
-public class Board {
-
+public class BoardDTO {
+	
 	private int board_id;
 	private String title;
 	private String writer;
 	private String content;
 	private int hit;
 	
-	public Board() {}
+	public BoardDTO() {}
 	
-	public Board( int board_id, String title, String writer, String content, int hit ) {
-		this.board_id = board_id;
+	public BoardDTO( String title, String writer, String content ) {
 		this.title = title;
 		this.writer = writer;
 		this.content = content;
+	}
+	
+	public BoardDTO( int board_id, String title, String writer, String content, int hit ) {
+		this( title , writer , content );
+		this.board_id = board_id;
 		this.hit= hit;
 	}
 
@@ -57,7 +61,4 @@ public class Board {
 	public void setHit(int hit) {
 		this.hit = hit;
 	}
-	
-
-	
 }

@@ -15,8 +15,9 @@
 		<a href="/signup.do">회원가입</a>
 		<a href="/signin.do">로그인</a>
 	</c:if>
-	<c:if test="${ sessionScope != null }">
-		${sessionScope.user }<a href="">로그아웃</a>
+	
+	<c:if test="${ sessionScope.user != null }">
+		${sessionScope.user }<a href="/logout.do">로그아웃</a>
 	</c:if>
 	
 	<a href="/board.do">게시판</a>

@@ -10,16 +10,21 @@ public class Signin implements MainActive{
 	@Override
 	public String action ( HttpServletRequest request , HttpServletResponse response ) {
 		
-		String id = request.getParameter( "userId" );
-		String pw = request.getParameter( "userPassword" );
-		
-		// 데이터 베이스에서 아이디 비번 조회 하기
-		MemberDAO dao = new MemberDAO();
-		
-		boolean isSuccess = dao.login( id, pw );
-		
-		if( isSuccess ) {
-			request.getSession().setAttribute( "user" , id );
+		if( request.getSession().getAttribute( "user" ) != null ) {
+			request.getSession().removeAttribute( "user" );
+		}
+		else {
+			String id = request.getParameter( "userId" );
+			String pw = request.getParameter( "userPassword" );
+			
+			// 데이터 베이스에서 아이디 비번 조회 하기
+			MemberDAO dao = new MemberDAO();
+			
+			boolean isSuccess = dao.login( id, pw );
+			
+			if( isSuccess ) {
+				request.getSession().setAttribute( "user" , id );
+			}
 		}
 		
 		try {
