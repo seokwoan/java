@@ -69,21 +69,3 @@
 	<img src="<%=img.getImgPath()%><%=img.getImgName()%>">
 	
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
