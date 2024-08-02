@@ -19,6 +19,7 @@
 
 <body>
 
+	<a href="/board.do">게시판목록</a>
 	<table>
 		<tr>
 			<td>제목</td>
@@ -47,6 +48,34 @@
 	
 	</table>
 
+	<hr>
+	<!-- 댓글 -->
+	<table>
+		<c:if test="${sessionScope.user != null }">
+			<tr>
+				<td>
+					<textarea id="comment" name="comment" rows=3 cols=30>~~~</textarea>
+				</td>
+				
+				<td>
+					<button id="commentBt">입력</button>
+				</td>
+			</tr>
+		</c:if>
+		
+		<c:forEach var="row" items="${comments }">
+			<tr>
+				<td> 
+					${ row.writer } <br> ${ row.writeDate } <br>
+					<c:if test="${sessionScope.user eq row.writer }">
+						<a href="/commentDelete.do?id=${row.commentId }">삭제</a>
+					</c:if>				
+				</td>
+				<td> ${row.comment } </td>
+			</tr>
+		</c:forEach>	
+	</table>
+	
 
 </body>
 
@@ -67,4 +96,40 @@
 
 	});
 
+	
+	$("#commentBt").on( "click" , function(){
+		let $fm = $( '<form></form>' ); // 폼태그 생성
+		$fm.attr( "method" , "get" );
+		$fm.attr( "action" , "/comment.do" );
+		$fm.append( "<input type=hidden name=boardId value=${board.board_id}>" );
+		$fm.append( $("#comment") ); // form태그 안에 id가 comment인 태그를 넣어줌
+		$fm.appendTo( "body" ); // 생성한 form태그를 바디태그 안에 넣어줌
+		$fm.submit(); // 전송
+		
+		
+	});
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

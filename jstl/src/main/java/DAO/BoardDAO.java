@@ -119,6 +119,23 @@ public class BoardDAO extends DBConnect{
 		}
 		
 	}
+
+	public void update(BoardDTO dto) {
+		String sql = "update board set title=? , content=? where board_id=?";
+		
+		try {
+			pt = conn.prepareStatement( sql );
+			pt.setString( 1 , dto.getTitle() );
+			pt.setString( 2 , dto.getContent() );
+			pt.setInt( 3 , dto.getBoard_id() );
+			pt.executeUpdate();			
+		}
+		catch( SQLException e ) {
+			e.printStackTrace();
+			System.out.println( "게시글 수정 오류" );
+		}
+		
+	}
 	
 }	
 

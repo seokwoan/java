@@ -50,7 +50,7 @@ public class BoardPage implements MainActive{
 						
 		// 게시글 목록 가져오기		
 		
-		int start = (pageNum - 1) * 10 + 1;
+		int start = (pageNum - 1) * 10 ;
 		List<BoardDTO> list = dao.findAll( start , keyWord ); // 전체 게시글 가져오기
 		
 		

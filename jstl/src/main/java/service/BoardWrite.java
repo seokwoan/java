@@ -23,7 +23,14 @@ public class BoardWrite implements MainActive{
 			
 			dao.save(dto);
 			
-			return "/board.do";
+			try {
+				response.sendRedirect("/board.do");
+			}
+			catch( Exception e ) {
+				
+			}
+			
+			return null;
 		}
 		else {
 			return "board/boardWrite.jsp";
