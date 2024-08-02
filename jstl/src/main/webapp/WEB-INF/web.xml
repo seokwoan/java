@@ -14,6 +14,7 @@
   <servlet>
   	<servlet-name>Main</servlet-name>
   	<servlet-class>controller.MainControl</servlet-class>
+  	<!-- 서블렛의 이름을 컨테이너에 저장 -->
   </servlet>
   
   <servlet-mapping>
