@@ -57,7 +57,7 @@ class Person implements Cloneable {
         System.out.println("Cloned: " + cloned);
 
         // 복제된 객체의 데이터를 변경
-        cloned.scores[0].grade = 100;
+        //cloned.scores[0].grade = 100;
 
         System.out.println("After modifying clone:");
         System.out.println("Original: " + original);

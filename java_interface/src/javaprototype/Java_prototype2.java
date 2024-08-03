@@ -7,8 +7,8 @@ public class Java_prototype2 {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
 		int[] scores = { 90, 80, 70 };
-		Person original = new Person( "John" , scores );
-		Person clone = (Person) original.clone(); // clone의 반환타입이 Object타입이므로 강제 형변환
+		Perso original = new Perso( "John" , scores );
+		Perso clone = (Perso) original.clone(); // clone의 반환타입이 Object타입이므로 강제 형변환
 		
 		System.out.println( original.toString() );
 		System.out.println( clone.toString() );
@@ -25,19 +25,19 @@ public class Java_prototype2 {
 
 }
 
-class Person implements Cloneable{
+class Perso implements Cloneable{
 	
 	private String name;
 	private int[] scores;
 	
-	public Person( String name, int[] scores ) {
+	public Perso( String name, int[] scores ) {
 		this.name = name;
 		this.scores = scores;
 	}
 	
 	@Override
 	public Object clone() throws CloneNotSupportedException {
-		Person cloned = (Person) super.clone();
+		Perso cloned = (Perso) super.clone();
 		cloned.scores = this.scores.clone();
 		return cloned;
 	}
