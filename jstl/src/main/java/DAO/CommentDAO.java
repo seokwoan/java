@@ -49,20 +49,18 @@ public class CommentDAO extends DBConnect{
 		return list;
 	}
 
-	public void delete(int bid) {
+	public void delete( int bid ) {
 		
-		String sql = "update comment set title=? , content=? where board_id=?";
+		String sql = "delete from board where board_id=?";
 		
 		try {
 			pt = conn.prepareStatement( sql );
-			pt.setString( 1 , dto.getTitle() );
-			pt.setString( 2 , dto.getContent() );
-			pt.setInt( 3 , dto.getBoard_id() );
-			pt.executeUpdate();			
+			pt.setInt( 1 , bid );
+			pt.executeUpdate();
 		}
 		catch( SQLException e ) {
 			e.printStackTrace();
-			System.out.println( "게시글 수정 오류" );
+			System.out.println( "게시물 삭제 실패" );
 		}
 		
 	}
