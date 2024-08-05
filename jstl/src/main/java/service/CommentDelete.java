@@ -12,12 +12,13 @@ public class CommentDelete implements MainActive {
 	public String action(HttpServletRequest request, HttpServletResponse response) {
 		
 		int bid = Integer.parseInt( request.getParameter( "id" ) );
+		int cid = Integer.parseInt( request.getParameter( "bid" ) );
 				
 		CommentDAO dao = new CommentDAO();
-		dao.delete( bid );
+		dao.delete( cid );
 		
 		try {
-			response.sendRedirect( "/board.do");
+			response.sendRedirect( "/board.do=" + bid );
 		}
 		catch( Exception e ) {
 			
