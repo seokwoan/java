@@ -22,7 +22,7 @@ class Student implements Cloneable {
     }
 }
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 class Person implements Cloneable {
     private String name;
     private Student[] scores; // Array of Student objects
@@ -108,4 +108,4 @@ class Person implements Cloneable {
 //        System.out.println("Cloned: " + cloned);
 //    }
 //}
->>>>>>> branch 'main' of https://github.com/seokwoan/java.git
+// >>>>>>> branch 'main' of https://github.com/seokwoan/java.git
